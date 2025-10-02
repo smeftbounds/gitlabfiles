@@ -31,7 +31,6 @@ wcxf_basis_data = {}
 wcxf_valid_ops = {}
 
 def wcxf_load_basis(in_file):
-    print("Loading WCxF basis definitions")
     with open(in_file) as f:
         import json
         json_data = json.load(f)
@@ -44,6 +43,7 @@ def wcxf_load_basis(in_file):
         wcxf_valid_ops[eft][basis] = [ k 
                       for sector in wcxf_basis_data[eft][basis]["sectors"].keys() 
                       for k in wcxf_basis_data[eft][basis]["sectors"][sector].keys() ]
+        #print(in_file)
         print(f"Found {len(wcxf_valid_ops[eft][basis])} valid operators for {eft} {basis}")
 
 def wcxf_check_operators(json_data):
@@ -51,6 +51,10 @@ def wcxf_check_operators(json_data):
     for result in json_data["results"]:
         eft = result["wcxf_eft"]
         basis = result["wcxf_basis"]
+        if eft not in wcxf_valid_ops or basis not in wcxf_valid_ops[eft]:
+            print(f"ERROR: EFT {eft} with basis {basis} not defined in WCxF. Please check.")
+            allgood = False
+            continue
         for c in result["bounds_coeffs"]:
             if c["coeff"] not in wcxf_valid_ops[eft][basis]:
                 print(f"ERROR: operator {c['coeff']} isn't a valid name in WCxf {eft} {basis} definition.")
@@ -64,8 +68,9 @@ def wcxf_validate_json(json_to_validate):
 # Note that the alternative approach might be to augment the schema scriptically
 def validate_content(in_file, verbose=True):
     if not wcxf_basis_data:
-        import os, glob, wcxf
-        for f in glob.glob(os.path.dirname(wcxf.__file__)+"/**/*.basis.json", recursive=True):
+        print("Loading WCxF basis definitions")
+        import os, glob, wilson
+        for f in glob.glob(os.path.dirname(wilson.__file__)+"/**/*.basis.json", recursive=True):
             wcxf_load_basis(f)
     with open(in_file) as f:
         import json
@@ -78,7 +83,7 @@ if __name__ == '__main__':
     allgood = True
     for f in sys.argv[1:]:
         if not validate_json(f): allgood = False
-        elif validate_content(f): allgood = False
+        elif not validate_content(f): allgood = False
     if allgood == False:
         print("ERROR: some of the files are not valid according to the schema. Plase fix it or contact the authors.")
     sys.exit(not allgood)
