@@ -4,7 +4,7 @@ image: python:latest
 
 before_script:
   - python --version ; pip --version
-  - pip install jsonschema
+  - pip install jsonschema wcxf
 
 json_validation:
   rules:
