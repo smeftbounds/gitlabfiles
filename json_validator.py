@@ -78,7 +78,7 @@ if __name__ == '__main__':
     allgood = True
     for f in sys.argv[1:]:
         if not validate_json(f): allgood = False
-        if validate_content(f): allgood = False
+        elif validate_content(f): allgood = False
     if allgood == False:
         print("ERROR: some of the files are not valid according to the schema. Plase fix it or contact the authors.")
     sys.exit(not allgood)
