@@ -27,6 +27,10 @@ def validate_json(in_file, verbose=True):
 
         return True
 
+# This is to add extra high-level validation that cannot easily be put into the schema
+# Note that the alternative approach might be to augment the schema scriptically
+def validate_content(in_file, verbose=True):
+    return True
 
 if __name__ == '__main__':
     import sys
