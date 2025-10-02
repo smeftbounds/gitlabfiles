@@ -1,0 +1,32 @@
+{
+  "submitter": "Karolos Potamianos <karolos.potamianos@cern.ch>",
+  "title": "Measurement of the energy asymmetry in ttj production at 13 TeV with the ATLAS experiment and interpretation in the SMEFT framework",
+  "arxiv": "2110.05453",
+  "reportNumber": "CERN-EP-2021-181",
+  "date": "2021-10-11",
+  "doi": "https://doi.org/10.1140/epjc/s10052-022-10101-w",
+  "description": "string",
+  "comments": "string",
+  "results": [
+    {
+      "lumi": 139,
+      "cme": 13000,
+      "wxcf_eft": "SMEFT",
+      "wxcf_basis": "Warsaw",
+      "p_order": "",
+      "eft_order": "",
+      "lambda_norm": 1000,
+      "fit_type": "",
+      "ewk_inputs": "",
+      "bounds_cl": "68%",
+      "bounds_coeffs": [
+        { "coeff": "C11Qq", "bound": "[-0.41, 0.47]" },
+        { "coeff": "C18Qq", "bound": "[-0.81, 1.24]" },
+        { "coeff": "C1tq", "bound": "[-0.43, 0.52]" },
+        { "coeff": "C8tq", "bound": "[-1.41, 0.84]" },
+        { "coeff": "C1tu", "bound": "[-0.50, 0.56]" },
+        { "coeff": "C8tu", "bound": "[-1.00, 1.01]" }
+      ]
+    }
+  ]
+}
