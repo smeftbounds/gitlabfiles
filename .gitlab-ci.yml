@@ -10,4 +10,4 @@ json_validation:
   only: 
     - merge_requests
   script:
-    - git diff --name-only ${CI_COMMIT_SHA} origin/${CI_MERGE_REQUEST_TARGET_BRANCH_NAME} | grep '\.json$' | xargs python3 json_validator.py
+    - git diff --name-only ..origin/${CI_MERGE_REQUEST_TARGET_BRANCH_NAME} | grep '\.json$' | xargs python3 json_validator.py
