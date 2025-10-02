@@ -11,8 +11,8 @@
     {
       "lumi": 139,
       "cme": 13000,
-      "wxcf_eft": "SMEFT",
-      "wxcf_basis": "Warsaw",
+      "wcxf_eft": "SMEFT",
+      "wcxf_basis": "Warsaw",
       "p_order": "",
       "eft_order": "",
       "lambda_norm": 1000,
