@@ -1,0 +1,13 @@
+# Author: K. Potamianos <karolos.potamianos@cern.ch>
+
+image: python:latest
+
+before_script:
+  - python --version ; pip --version
+  - pip install jsonschema
+
+json_validation:
+  only: 
+    - merge_requests
+  script:
+    - git diff --name-only origin/$CI_MERGE_REQUEST_TARGET_BRANCH_NAME | grep '\.json$' | xargs python3 json_validator.py
