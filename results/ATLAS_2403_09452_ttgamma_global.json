@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json.schemastore.org/wcxf-1.0.json",
+  "eft": "SMEFT",
+  "basis": "SMEFTsim_top", 
+  "scale": 1000, # probably we cannot rename this the Lambda? just because scale is the observable scale in POPxv
+  "metadata": {
+    # optional
+    "lumi": 140,
+    "cme": 13000,
+    "perturbative_order": "LO", # any string, e.g. "LO", "NLO", "NLO QCD", "NLO EW", "mixed", "LO + RGE", ... 
+    "comment": "ttgamma only, Tab. 7, global fit of ctWRe, ctWIm, ctBRe, ctBIm",
+    "observable_scale": 246. # added by AB; a numerical value or a list; add the scale at which the observable(s) is (are) measured (won't be possible for is various observables are included in a global fit); but could be nice to compare, e.g. EDM and collider bounds
+
+    # mandatory 
+    "submitter": {"name": "Anke Biekoetter", "email":"anke.biekoetter@kit.edu"},
+    "doi": "http://dx.doi.org/10.1007/JHEP10(2024)191",
+    "authors": ["ATLAS"], # add collaboration or list of authors; e.g. ATLAS, CMS, Peter Stangl, ... (list of strings, email addresses may be added) 
+    "fit_type": "<to do>", # "single parameter" | "profiled" | "marginalized" | "other"
+    "eft_order": {"truncation_level": "amplitude" | "observable" | "mixed", "truncation_order: "D6" | "D8" | "D6 quadratic" | "mixed"}, # "D6 lin" | "D6 quad" | "D6 amp" | "D6 mixed" | "other" | "more to discuss"
+    "bounds_cl": [0.68, 0.95]
+    "data_type": "existing" | "projected" # Do we have a better name for this field?
+
+    # recommended
+    "title": "Measurements of inclusive and differential cross-section of ttbargamma production in pp collisions at sqrt(s)=13 TEV with the ATLAS detector",
+    "arxiv": "2403.09452",
+    "report_number": "CERN-EP-2024-052",
+    "date": "2024-11-08",
+    "inputs": "<to do>", # match POPxf format, if no numbers given/known use comment field to specify the (input) scheme
+  },
+  "values": {
+    "ctWRe": [[-0.55, 1.9],  [-1.2, 2.8]],
+    "ctWIm": [[-0.95, 0.95], [-1.8, 1.8]],
+    "ctBRe": [[-0.30, 1.0],  [-0.66, 1.5]],
+    "ctBIm": [[-0.50, 0.54], [-0.96, 0.98]]
+  }
+}
