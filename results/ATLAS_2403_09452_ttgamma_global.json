@@ -9,7 +9,6 @@
     "cme": 13000,
     "perturbative_order": "LO", # any string, e.g. "LO", "NLO", "NLO QCD", "NLO EW", "mixed", "LO + RGE", ... 
     "comment": "ttgamma only, Tab. 7, global fit of ctWRe, ctWIm, ctBRe, ctBIm",
-    "observable_scale": 246. # added by AB; a numerical value or a list; add the scale at which the observable(s) is (are) measured (won't be possible for is various observables are included in a global fit); but could be nice to compare, e.g. EDM and collider bounds
 
     # mandatory 
     "submitter": {"name": "Anke Biekoetter", "email":"anke.biekoetter@kit.edu"},
