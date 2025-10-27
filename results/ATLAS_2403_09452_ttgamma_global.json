@@ -2,7 +2,7 @@
   "$schema": "https://json.schemastore.org/wcxf-1.0.json",
   "eft": "SMEFT",
   "basis": "SMEFTsim_top", 
-  "scale": 1000, # probably we cannot rename this the Lambda? just because scale is the observable scale in POPxv
+  "scale": 1000, # the renormalisation scale 
   "metadata": {
     # optional
     "lumi": 140,
