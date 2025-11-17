@@ -4,27 +4,22 @@
   "basis": "Warsaw",
   "scale": 1000, 
   "metadata": {
-    # optional
     "lumi": 139,
     "cme": 13000,
     "perturbative_order": "LO",
     "comment": " The article does not comment on EW input scheme. The SMEFTsim UFO is not referenced, so, I have put Warsaw in wcxf basis. The flavor assumption is not discussed in the article. We may discuss this on our next meeting.",
-
-    # mandatory 
     "submitter": {"name": "S.D. Bakshi", "email":"sdbakshi13@gmail.com"},
     "doi": "http://dx.doi.org/10.1140/epjc/s10052-020-08677-2",
     "authors": ["ATLAS"],
     "fit_type": "single parameter",
-    "eft_order": {"truncation_level": "observable", "truncation_order: "D6 quadratic"},
+    "eft_order": {"truncation_level": "observable", "truncation_order": "D6 quadratic"},
     "bounds_cl": [0.68],
     "data_type": "existing" ,
-
-    # recommended
     "title": "Measurements of WH and ZH production in the H->bb- decay channel in pp collisions at 13 TeV with the ATLAS detector",
     "arxiv": "2007.02873v2",
     "report_number": "CERN-EP-2020-087",
     "date": "2021-03-08",
-    "inputs": " ",
+    "inputs": ""
   },
   "values": {
     "phiq1_11": [-0.10, 0.13],
@@ -33,6 +28,6 @@
     "phid_11": [-0.16, 0.21],
     "phiW": [-0.24, 0.18],
     "phiWB": [-0.44, 1.1],
-    "dphi_11": [-10.,3.8,29,43]
+    "dphi_11": [-10.0,3.8,29,43]
   }
 }
