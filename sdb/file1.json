@@ -16,7 +16,7 @@
     "authors": ["ATLAS"],
     "fit_type": "single parameter",
     "eft_order": {
-      "truncation_level": "amplitude",
+      "truncation_level": "observable",
       "truncation_order": "D6"
     },
     "bounds_cl": [0.68],
