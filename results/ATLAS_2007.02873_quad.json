@@ -15,7 +15,7 @@
     "doi": "http://dx.doi.org/10.1140/epjc/s10052-020-08677-2",
     "authors": ["ATLAS"],
     "fit_type": "single parameter",
-    "eft_order": {"truncation_level": "amplitude", "truncation_order: "D6 quadratic"},
+    "eft_order": {"truncation_level": "observable", "truncation_order: "D6 quadratic"},
     "bounds_cl": [0.68],
     "data_type": "existing" ,
 
